@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1041311397920",
+    "project_id": "vbwf-4bc0c",
+    "storage_bucket": "vbwf-4bc0c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041311397920:android:b7ee91d3142b02ad646445",
+        "android_client_info": {
+          "package_name": "com.thehinhvn.thehinhvn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPw61wH2QyT7G1F8Lwq0VW7gTfEGXz0yk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
