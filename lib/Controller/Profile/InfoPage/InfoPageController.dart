@@ -171,7 +171,7 @@ class InfoPageController extends GetxController {
           .putFile(
             endpoint: 'v1/Upload/upload-single-image',
             filePath: banner.value,
-            type: 3,
+            type: 8,
           )
           .then((response) {
             if (response != null) {

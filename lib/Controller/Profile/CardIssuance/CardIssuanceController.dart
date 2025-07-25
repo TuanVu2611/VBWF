@@ -106,23 +106,21 @@ class CardIssuanceController extends GetxController {
     checkCardStatus();
   }
 
-  Future<void> cardIssuance() async {
+  Future<bool> cardIssuance() async {
     try {
       var response = await APICaller.getInstance().post(
         'v1/User/create-card-request-app',
         null,
       );
-
       if (response != null && response['error']?['code'] == 0) {
         showRequestButton.value = false;
         await checkCardStatus();
-      } else {
-        String errorMessage =
-            response['error']?['message'] ?? 'Không thể lấy dữ liệu!';
-        Utils.showSnackBar(title: 'Lỗi', message: errorMessage);
+        return true;
       }
+      return false;
     } catch (e) {
       Utils.showSnackBar(title: 'Lỗi', message: 'Đã xảy ra lỗi: $e');
+      return false;
     }
   }
 
@@ -132,14 +130,9 @@ class CardIssuanceController extends GetxController {
         'v1/User/get-detail-card-request-app',
         null,
       );
-
       if (response != null && response['error']?['code'] == 0) {
         cardState.value = response['data']?['cardState'] ?? null;
         cardRejected.value = response['data']?['cardRejected'] ?? '';
-      } else {
-        String errorMessage =
-            response['error']?['message'] ?? 'Không thể lấy dữ liệu!';
-        Utils.showSnackBar(title: 'Lỗi', message: errorMessage);
       }
     } catch (e) {
       Utils.showSnackBar(title: 'Lỗi', message: 'Đã xảy ra lỗi: $e');

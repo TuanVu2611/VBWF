@@ -334,7 +334,7 @@ class CVManagement extends StatelessWidget {
                         ..setJavaScriptMode(JavaScriptMode.unrestricted)
                         ..loadRequest(
                           Uri.parse(
-                            "http://vbwf-user.mobiplus.vn/cv?_uuid=${controller.uuid.value}",
+                            "http://vbwf.org.vn/user/cv?_uuid=${controller.uuid.value}",
                           ),
                         ),
                 ),
