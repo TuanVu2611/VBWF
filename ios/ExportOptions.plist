@@ -4,7 +4,7 @@
 <plist version="1.0">
 <dict>
   <key>method</key>
-  <string>development</string> <!-- Hoặc ad-hoc nếu dùng ad-hoc provisioning profile -->
+  <string>ad-hoc</string> <!-- Hoặc ad-hoc nếu dùng ad-hoc provisioning profile -->
   <key>signingStyle</key>
   <string>manual</string>
   <key>provisioningProfiles</key>

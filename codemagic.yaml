@@ -13,10 +13,13 @@ workflows:
     scripts:
       - name: Install dependencies
         script: |
+          flutter clean
           flutter pub get
-      - name: Build iOS
+          pod repo update
+          cd ios && pod install && cd ..
+      - name: Build iOS IPA
         script: |
-          flutter build ipa \
+          flutter build ipa --release \
             --export-options-plist=ios/ExportOptions.plist
     artifacts:
       - build/ios/ipa/*.ipa
