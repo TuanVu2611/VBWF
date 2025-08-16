@@ -10,7 +10,7 @@
   <key>provisioningProfiles</key>
   <dict>
     <key>com.thehinhvn.thehinhvn</key>
-    <string>vbwf_pro_dev</string>
+    <string>vbwf_pro_adhoc</string>
   </dict>
 </dict>
 </plist>
